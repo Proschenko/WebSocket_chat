@@ -1,0 +1,180 @@
+/* Общие стили */
+body {
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Основной контейнер */
+#app-container {
+    display: flex;
+    width: 800px;
+    height: 600px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Левая панель: Контакты */
+#contacts-container {
+    width: 30%;
+    background-color: #E0F7DA;
+    border-right: 1px solid #CCC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #74D03A;
+    margin-bottom: 20px;
+}
+
+
+#contacts {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Контейнер занимает всю ширину */
+}
+
+#contacts li {
+    padding: 10px 15px; /* Внутренние отступы */
+    font-size: 14px; /* Размер шрифта */
+    border: 1px solid #CCC; /* Рамка вокруг элемента */
+    border-radius: 20px; /* Скругленные углы для овала */
+    background-color: #F8F8F8; /* Фон по умолчанию */
+    margin-bottom: 10px; /* Отступ между элементами */
+    display: block; /* Элементы в столбик */
+    width: auto; /* Адаптация к содержимому */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Плавный эффект */
+    white-space: nowrap; /* Не переносим текст на новую строку */
+    overflow: hidden; /* Скрываем избыточный текст */
+    text-overflow: ellipsis; /* Добавляем многоточие для длинных имён */
+}
+
+#contacts li:hover {
+    background-color: #DFF5C5; /* Фон при наведении */
+    transform: scale(1.02); /* Легкое увеличение при наведении */
+}
+
+
+
+.status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status.online {
+    background-color: #74D03A;
+}
+
+.status.do-not-disturb {
+    background-color: #FFD700;
+}
+
+.status.offline {
+    background-color: #CCC;
+}
+
+/* Правая панель: Чат */
+#chat-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    background-color: #74D03A;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #5DB132;
+}
+
+#messages-container {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+}
+
+#messages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+#messages li.incoming {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+}
+
+#messages li.outgoing {
+    background-color: #E0F7DA;
+    border: 1px solid #B2E2B2;
+    margin-left: auto;
+}
+
+/* Нижняя панель ввода */
+#input-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    border-top: 1px solid #CCC;
+}
+
+#emoji-button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#emoji-button:hover {
+    color: #FFD700;
+}
+
+#message-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 8px 15px;
+    background-color: #74D03A;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#send-button:hover {
+    background-color: #5DB132;
+}
